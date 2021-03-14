@@ -119,23 +119,153 @@ describe("When isFullHouse is given an array of 5 numbers,", () => {
 
 // b) Create the function that makes the test pass.
 
-const isFullHouse = (array) => {
-    const copy = array.slice();
-    for(let i = 0; i < array.length; ){
-        const el = copy.splice(i, 1)[0];
-        if(copy.includes(el)){
-            copy.splice(copy.indexOf(el), 1);
-            if(copy.includes(el)){
-                return true;
-            }
-        }else{
-            i++;
-        }
-    };
-    return false;
-};
-
+// Deven + Sarah discussion on how to go about this problem:
 // check for unique values and the count of the values 
 // store the cards in an object (key:value pair)
 // find two unique values and check to see if there are multiple of them 
 // keeping track of the characters and tracking them: update the value within the object
+
+const isFullHouse = (array) => {
+
+    if(array.length !== 5){
+        return "Please give me a 5 card hand to evaluate, no less no more."
+    }
+    // make sure given array is correct length for a poker hand
+
+    let count = {};
+    // object to store the counts of each occurring element
+
+    for(let i = 0; i < array.length; i++){
+        // iterate through all of the cards
+        let current = array[i];
+        // store the current i'th card in a variable called 'current'
+        count[current] = count[current] ? count[current] + 1 : 1;
+        // place the current number inside the object, then check if the current number is seen in the object and add 1 to it, if it is not, keep the value of 1
+    }
+    
+    if(Object.values(count)[0] == 2 && Object.values(count)[1] == 3){
+        return true;
+    } else if(Object.values(count)[0] == 3 && Object.values(count)[1] == 2){
+        return true;
+    } else {
+        return false;
+    }
+    // if the values match the full house sequence, print out true, otherwise false
+}
+
+console.log(isFullHouse(hand1))
+console.log(isFullHouse(hand2))
+console.log(isFullHouse(hand3))
+
+// // super long tedious function that I think only works well given certain hands
+// const isFullHouse1 = (array) => {
+
+//     let sameCard = 0;
+//     let pair;
+//     let tripple;
+
+//     for(let i = 1; i < 4; i++){
+//         if(array[0] == array[i]){
+//             sameCard += 1;
+//         }
+//     }
+
+//     if(sameCard === 3){
+//         tripple = sameCard;
+//     } else if(sameCard === 2){
+//         pair = sameCard;
+//     } else {
+//         sameCard = 0
+//     }
+
+//     for(let i = 2; i < 4; i++){
+//         if(array[1] == array[i]){
+//             sameCard += 1;
+//         }
+//     }
+
+//     if(sameCard === 3){
+//         tripple = sameCard;
+//     } else if(sameCard === 2){
+//         pair = sameCard;
+//     } else {
+//         sameCard = 0
+//     }
+
+//     for(let i = 3; i < 4; i++){
+//         if(array[2] == array[i]){
+//             sameCard += 1;
+//         }
+//     }
+
+//     if(sameCard === 3){
+//         tripple = sameCard;
+//     } else if(sameCard === 2){
+//         pair = sameCard;
+//     } else {
+//         sameCard = 0
+//     }
+
+//     for(let i = 4; i < 4; i++){
+//         if(array[3] == array[i]){
+//             sameCard += 1;
+//         }
+//     }
+
+//     if(sameCard === 3){
+//         tripple = sameCard;
+//     } else if(sameCard === 2){
+//         pair = sameCard;
+//     } else {
+//         sameCard = 0
+//     }
+
+//     if(tripple === 3 && pair === 2){
+//         return true;
+//     } else {
+//         return false
+//     }
+
+// }
+
+// // Tried to refactor the above attempt but still is not functioning as expected
+// const isFullHouse2 = (array) => {
+
+//     let sameCard = 0;
+//     let pair;
+//     let tripple;
+
+//     for(let cc = 0; cc < array.length; cc++){
+//         // loop to check if the cc (current card) matches the rest of the cards
+//         for(let nc = (cc + 1); nc < array.length - 1; nc++){
+//             // loop that iterates through the nc (nextcard) to check if it's the same as cc
+//             if(array[cc] == array[nc]){
+//                 // check if the cc is the same as the nc
+//                 sameCard += 1;
+//                 // augment the count for every match
+//             }
+//         }
+
+//         if(sameCard === 2){
+//             tripple = sameCard + 1;
+//             sameCard = 0;
+//             // if the first iteration on the first card is a 3, store it
+//         } else if(sameCard === 1){
+//             pair = sameCard + 1;
+//             sameCard = 0;
+//             // if it is a 2, store that
+//         } else {
+//             sameCard = 0
+//             // if there were no findings of either a pair or a tripple, reset the counter
+//         }
+//     }
+
+//     if(tripple === 3 && pair === 2){
+//         return true;
+//     } else {
+//         return false
+//     }
+//     // evaluates whethere there has been a full house or not
+
+// }
+
