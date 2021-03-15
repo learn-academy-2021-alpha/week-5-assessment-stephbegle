@@ -32,7 +32,7 @@ var hand3 = [5, 5, 5, 5, 4]
 // Expected output: false
 var hand4 = [6, 3, 3, 6, 6]
 var hand5 = [1,2,3,3,3]
-var hand6 = [4,4,7,7,7]
+var hand6 = [4,4,7,7,7,7]
 
 
 

@@ -44,6 +44,7 @@ describe("When wordDecoder is given a string,", () => {
 const wordDecoder = (string) => {
 
     return string.replaceAll('a', 4).replaceAll('e', 3).replaceAll('i', 1).replaceAll('o', 0)
+    // replace all occurrences of a's with 4, all e's with 3, all i's with 1, and all o's with 0
 
 }
 
@@ -75,7 +76,9 @@ describe("When wordContainsA is given a array of words,", () => {
 const wordContainsA = (array) => {
 
     return array.filter(word => {
+
         if(word.includes('a') || word.includes('A')){
+            // if the word contains an a of any form, return the word 
             return word
         }
     })
@@ -136,19 +139,22 @@ const isFullHouse = (array) => {
     // object to store the counts of each occurring element
 
     for(let i = 0; i < array.length; i++){
-        // iterate through all of the cards
+        // iterate through all of the numbers in the array
         let current = array[i];
-        // store the current i'th card in a variable called 'current'
+        // store the current number in a variable called 'current'
         count[current] = count[current] ? count[current] + 1 : 1;
-        // place the current number inside the object, then check if the current number is seen in the object and add 1 to it, if it is not, keep the value of 1
+        // place the current inside the object, then check if the current is seen in the object and add 1 to it for however many times it appeared. If it is not seen in the object again, keep the value of 1 (giving it an occurence of only 1)
     }
     
     if(Object.values(count)[0] == 2 && Object.values(count)[1] == 3){
         return true;
+
     } else if(Object.values(count)[0] == 3 && Object.values(count)[1] == 2){
         return true;
+
     } else {
         return false;
+
     }
     // if the values match the full house sequence, print out true, otherwise false
 }
