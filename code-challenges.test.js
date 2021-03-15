@@ -156,7 +156,7 @@ const isFullHouse = (array) => {
         return false;
 
     }
-    // if the values match the full house sequence, print out true, otherwise false
+    // if the values match the full house combination, print out true, otherwise false
 }
 
 console.log(isFullHouse(hand1))
