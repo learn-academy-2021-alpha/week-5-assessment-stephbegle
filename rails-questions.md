@@ -28,4 +28,4 @@ The Book model would contain the foreign key and it would be named libraries_id.
 
 6. What is the schema file in a Rails application? Can you modify the schema directly? Why or why not?
 
-The schema file in rails application is a model of what your table is supposed to look like. You should not modify the schema table directly because it is just a model of what your table should look like, but it will not update any changes unless you make the changes in the console or in the classes of the created models.  
+The schema file in rails application is a model of the structure of what your table will look like and how it will be gathering data. You should not modify the schema table directly because it will not update any changes unless you make the changes in the console.  

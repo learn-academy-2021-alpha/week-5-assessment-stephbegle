@@ -40,17 +40,24 @@ https://www.astera.com/type/blog/a-quick-overview-of-different-types-of-database
 
 5. What is object-relational mapping?
 
-  Your answer: object-relational-mapping is what is used by ruby in order to transition data from ruby code to sql queries... I think. 
+  Your answer: object-relational-mapping is what is used by ruby in order to transition data from ruby code to sql queries. 
 
-  Researched answer: is a ruby package with a name, version, and platform
+  Researched answer: a library that implements the technique of writing queries using an object oriented programming language like Ruby. The ORM maps over a ruby 'query' and transforms it into a SQL query that will ask the database to store that information into tables and columns. 
 
-
+  https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a
 
 6. What is a gem?
 
   Your answer: a gem is what ruby calls its packages. 
 
-  Researched answer:
+  Researched answer: is a ruby package with a name, version, and platform. Each gem contains code, documentation, and gemspec. Structure of a gem: 
+    1. lib - directory that contains the code for the gem
+    2. test - directory that contains tests, depending on which test framework is being used by the developer
+    3. Rakefile - automate tests, generate code, and perform other tasks using the 'rake' program
+    4. executable file in 'bin' directory which gets loaded into the users path when the gem is installed
+    5. readme - the documentation for the gem (RDoc documentation or YARD documentations) 
+
+    https://guides.rubygems.org/what-is-a-gem/
 
 
 
@@ -58,7 +65,9 @@ https://www.astera.com/type/blog/a-quick-overview-of-different-types-of-database
 
   Your answer: a primary key is the main key belonging to table. They are important because they reference specific observations.
 
-  Researched answer:
+  Researched answer: key or id that is generated as a column automatically once an instance or record is created in a table. It is used to uniquely identify each instance recorded in a table.
+
+  https://www.ques10.com/p/9627/explain-primary-key-with-suitable-example-1/
 
 
 

@@ -157,6 +157,8 @@ console.log(isFullHouse(hand1))
 console.log(isFullHouse(hand2))
 console.log(isFullHouse(hand3))
 
+
+// previous attempts
 // // super long tedious function that I think only works well given certain hands
 // const isFullHouse1 = (array) => {
 
@@ -167,6 +169,7 @@ console.log(isFullHouse(hand3))
 //     for(let i = 1; i < 4; i++){
 //         if(array[0] == array[i]){
 //             sameCard += 1;
+            // // if the current card matched the following cards, increase the sameCard counter by 1
 //         }
 //     }
 
@@ -174,13 +177,16 @@ console.log(isFullHouse(hand3))
 //         tripple = sameCard;
 //     } else if(sameCard === 2){
 //         pair = sameCard;
+            // // if the count is either a two or a three, store that value
 //     } else {
 //         sameCard = 0
+            // // if the count is neither 2 or 3, keep sameCard variable at 0
 //     }
 
 //     for(let i = 2; i < 4; i++){
 //         if(array[1] == array[i]){
 //             sameCard += 1;
+            // // if the current card matched the following cards, increase the sameCard counter by 1
 //         }
 //     }
 
@@ -188,13 +194,16 @@ console.log(isFullHouse(hand3))
 //         tripple = sameCard;
 //     } else if(sameCard === 2){
 //         pair = sameCard;
+            // // if the count is either a two or a three, store that value
 //     } else {
 //         sameCard = 0
+            // // if the count is neither 2 or 3, keep sameCard variable at 0
 //     }
 
 //     for(let i = 3; i < 4; i++){
 //         if(array[2] == array[i]){
 //             sameCard += 1;
+            // // if the current card matched the following cards, increase the sameCard counter by 1
 //         }
 //     }
 
@@ -202,13 +211,16 @@ console.log(isFullHouse(hand3))
 //         tripple = sameCard;
 //     } else if(sameCard === 2){
 //         pair = sameCard;
+            // // if the count is either a two or a three, store that value
 //     } else {
 //         sameCard = 0
+            // // if the count is neither 2 or 3, keep sameCard variable at 0
 //     }
 
 //     for(let i = 4; i < 4; i++){
 //         if(array[3] == array[i]){
 //             sameCard += 1;
+            // // if the current card matched the following cards, increase the sameCard counter by 1
 //         }
 //     }
 
@@ -216,8 +228,10 @@ console.log(isFullHouse(hand3))
 //         tripple = sameCard;
 //     } else if(sameCard === 2){
 //         pair = sameCard;
+            // // if the count is either a two or a three, store that value
 //     } else {
 //         sameCard = 0
+            // // if the count is neither 2 or 3, keep sameCard variable at 0
 //     }
 
 //     if(tripple === 3 && pair === 2){
@@ -225,6 +239,7 @@ console.log(isFullHouse(hand3))
 //     } else {
 //         return false
 //     }
+        // // if the stored values equal the targeted values print true otherwise false
 
 // }
 
