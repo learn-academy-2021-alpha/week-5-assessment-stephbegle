@@ -18,8 +18,9 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: if an application has CRUD it means that it has the ability to create, read, update, and delete content either by the user or other changes in the application.
 
-  Researched answer: 
+  Researched answer: four functions that are necessary to implement a persistent storage application. Persistent storage refers to any storage device that retains power after the device is powered off, such as a hard disk or a solid-state drive. Create, read, update, and Delete. These functions help keep data up to date. 
 
+  https://www.sumologic.com/glossary/crud/#:~:text=CRUD%20is%20an%20acronym%20that,%2C%20read%2C%20update%20and%20delete.
 
 
 3. What is a relational database? Are there other kinds of databases?
@@ -30,21 +31,34 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 https://www.astera.com/type/blog/a-quick-overview-of-different-types-of-databases/
 
+
 4. What are the 5 HTTP verbs? What are they important?
 
   Your answer: The 5 HTTP verbs, if I remember correctly are: puts, delete, and post are the only ones coming to my head right now. They are important because they serve as instructions for what a request should be doing.  
 
-  Researched answer: POST, PUT, GET, PATCH, and DELETE. They are important 
+  Researched answer: GET, POST, PUT, PATCH, and DELETE. These verbs are important because they serve as actions that tell computers how to interact with each other and what is going to be occurring in each interaction. 
+  1. Get - fetches data from the server or displays the content requested
+  2. Post - creates content (typically by the user)
+  3. Put - updates content (changes some existing content; edits)
+  4. Patch - also updates content similar to put
+  5. Delete - deletes content  
+  - extras:
+  6. Safe method - get (doesnt change anything in the server, there are no side effects, it is solely retreiving information and displaying it)
+  7. Unsafe methods - delete (deletes something from the server), post (create new data on the server so you are changing it), put (updating data which is changing the content in the server as well)
+  8. Idempotency - the state of the system you are dealing with will remain the same no matter how many times you perform the same action (so if you are updating the same content with the exact same content (like with a puts), there will be no difference in the outcome so it is said then, that that request is idempotent. But if you are creating a new message and run that request again, you've created another message, and if you run it again, you'd have created a third message, so this 'post' request is not idempotent) 
 
+  https://robm.me.uk/2013/09/http-verbs/
 
 
 5. What is object-relational mapping?
 
   Your answer: object-relational-mapping is what is used by ruby in order to transition data from ruby code to sql queries. 
 
-  Researched answer: a library that implements the technique of writing queries using an object oriented programming language like Ruby. The ORM maps over a ruby 'query' and transforms it into a SQL query that will ask the database to store that information into tables and columns. 
+  Researched answer: a library that implements the technique of writing queries using an object oriented programming language like Ruby. The ORM maps over a ruby 'query' and transforms it into a SQL query that will ask the database to store that information into tables and columns.
 
+  Lecture: 3/9 - Intro to Databases (Mina) 
   https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a
+
 
 6. What is a gem?
 
@@ -56,9 +70,10 @@ https://www.astera.com/type/blog/a-quick-overview-of-different-types-of-database
     3. Rakefile - automate tests, generate code, and perform other tasks using the 'rake' program
     4. executable file in 'bin' directory which gets loaded into the users path when the gem is installed
     5. readme - the documentation for the gem (RDoc documentation or YARD documentations) 
+    Rails is a collection of 8 or 9 gems that allows the file structure of rails to be built. A bunch of dependencies that allow rails apps to run. Similarly to react having a bunch of node modules strung together by yarn (or npm). 
 
+    Lecture: 3/10 - Intro to Ruby on Rails (Sarah)
     https://guides.rubygems.org/what-is-a-gem/
-
 
 
 7. What are primary keys? Why are they important?

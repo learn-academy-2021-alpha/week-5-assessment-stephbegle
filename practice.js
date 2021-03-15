@@ -1,4 +1,4 @@
-// #1
+// #1 ---------------------------------
 const wordDecode = (string) => {
 
     return string.replaceAll('a', 4).replaceAll('e', 3).replaceAll('i', 1).replaceAll('o', 0)
@@ -7,7 +7,7 @@ const wordDecode = (string) => {
 
 console.log(wordDecode("Hi hello hannah, hop on this zoom"))
 
-// #2
+// #2 ---------------------------------
 const wordContainsA = (array) => {
 
     return array.filter(word => {
@@ -21,7 +21,8 @@ const wordContainsA = (array) => {
 console.log(wordContainsA(["Apple", "Banana", "Plum", "Cherry", "Kiwi", "Peach"]))
 // ["Apple", "Banana", "Plum", "Cherry", "Kiwi", "Peach"]
 
-// #3 Create a function that takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is exactly one pair and one three of a kind.
+
+// #3 ---------------------------------
 
 var hand1 = [5, 5, 5, 3, 3]
 // Expected output: true
@@ -35,7 +36,7 @@ var hand6 = [4,4,7,7,7]
 
 
 
-const isFullHouse = (array) => {
+const isFullHouse2 = (array) => {
 
     let sameCard = 0;
     let pair = 0;
@@ -75,7 +76,7 @@ const isFullHouse = (array) => {
 
 }
 
-
+// ---------------------------------
 const isFullHouse = (array) => {
 
     if(array.length !== 5){

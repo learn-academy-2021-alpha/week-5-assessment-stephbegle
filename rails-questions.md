@@ -3,6 +3,8 @@
 1. What is the command to create a new Rails application with a Postgres database?
 
 $ rails new new_application -d postrgesql -T
+$ cd new_application
+$ rails db:create
 
 2. Oops, I forgot to add a foreign key to my model. Describe the steps to remedy this mistake.
 
@@ -28,4 +30,4 @@ The Book model would contain the foreign key and it would be named libraries_id.
 
 6. What is the schema file in a Rails application? Can you modify the schema directly? Why or why not?
 
-The schema file in rails application is a model of the structure of what your table will look like and how it will be gathering data. You should not modify the schema table directly because it will not update any changes unless you make the changes in the console.  
+The schema file in rails application is a model of the structure of what your table will look like and how it will be gathering data. It is like a blueprint of how your data will be flowing within your application. You should not modify the schema table directly because it will not update any changes unless you make the changes in the console.  

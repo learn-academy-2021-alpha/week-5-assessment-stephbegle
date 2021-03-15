@@ -159,7 +159,7 @@ console.log(isFullHouse(hand3))
 
 
 // previous attempts
-// // super long tedious function that I think only works well given certain hands
+// // super long tedious function that only works well given certain hands, so it fails
 // const isFullHouse1 = (array) => {
 
 //     let sameCard = 0;
@@ -242,6 +242,8 @@ console.log(isFullHouse(hand3))
         // // if the stored values equal the targeted values print true otherwise false
 
 // }
+
+
 
 // // Tried to refactor the above attempt but still is not functioning as expected
 // const isFullHouse2 = (array) => {
